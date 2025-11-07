@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kinh Doanh</title>
+  <style>
+    /* ===== CẤU TRÚC CHUNG ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 40px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== THANH MENU (NAV) ===== */
+    nav.menu {
+      display: flex;
+      gap: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background-color: #f0f0f0;
+      padding: 10px 15px;
+      border-radius: 6px;
+      justify-content: center;
+    }
+
+    nav.menu a {
+      text-decoration: none;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    nav.menu a:hover {
+      color: #007f3d;
+    }
+
+    nav.menu .active {
+      color: #007f3d; 
+    }
+
+    /* ===== NỘI DUNG CHÍNH ===== */
+    main {
+      max-width: 90%;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #007f3d;
+      margin-bottom: 10px;
+      text-align: center;
+      background-color: #e5f5e0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .news-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      flex-wrap: wrap; /* đáp ứng yêu cầu dùng flex-wrap */
+    }
+
+    /* ===== BÀI VIẾT CHÍNH ===== */
+    article.main-news {
+      flex: 0 0 60%;
+      background-color: #fafafa;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    article.main-news img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    article.main-news h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #000;
+      background-color: #e5f5e0;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    article.main-news p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* ===== CÁC TIN PHỤ BÊN PHẢI ===== */
+    aside.side-news {
+      flex: 0 0 35%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .side-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+      gap: 10px;
+    }
+
+    .side-item:last-child {
+      border-bottom: none;
+    }
+
+    .side-item img {
+      width: 120px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .side-item a {
+      text-decoration: none;
+      color: #000;
+      font-size: 15px;
+      line-height: 1.4;
+      transition: 0.3s;
+    }
+
+    .side-item a:hover {
+      color: #007f3d;
+    }
+
+    /* ===== CHÂN TRANG ===== */
+    footer {
+      background-color: #007f3d;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- THANH MENU -->
+  <nav class="menu">
+    <a href="#" class="active">KINH DOANH</a>
+    <a href="#">Tài chính</a>
+    <a href="#">Chứng khoán</a>
+    <a href="#">Doanh nghiệp</a>
+  </nav>
+
+  <!-- TIÊU ĐỀ NỘI DUNG CHÍNH -->
+  <h1>Chuyên mục Nội dung chính</h1>
+
+  <main>
+    <div class="news-container">
+      <!-- BÀI VIẾT CHÍNH -->
+      <article class="main-news">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.iWQuhs19YWsvDxKJGwTixgHaD4?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hoa lan Tết">
+        <h2>Hoa lan Tết xuống phố sớm, khách chủ yếu đi khảo giá, chưa chốt "hàng hot"</h2>
+        <p>Chỉ còn gần một tháng nữa là đến Tết Nguyên đán, không ít tuyến phố Hà Nội bắt đầu xuất hiện những điểm bán hoa lan Tết với nhiều chủng loại và mức giá khác nhau...</p>
+      </article>
+
+      <!-- DANH SÁCH TIN PHỤ -->
+      <aside class="side-news">
+        <div class="side-item">
+          <a href="#">Tuần đầu năm mới: Giá vàng tăng 1,8 triệu đồng/lượng</a>
+          <img src="https://th.bing.com/th/id/OIP.To0e2uYy70W9Lk3ByQdikQHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Giá vàng">
+        </div>
+
+        <div class="side-item">
+          <a href="#">Chứng khoán 2025 sẽ ra sao sau năm khối ngoại bán ròng kỷ lục?</a>
+          <img src="https://tse3.mm.bing.net/th/id/OIP.BPwKWgHlWUXkmQmSyzwq0AHaD4?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Chứng khoán">
+        </div>
+
+        <div class="side-item">
+          <a href="#">Shopee, Dược phẩm Hoa Linh, chủ chuỗi Aristino... sắp bị thanh tra</a>
+          <img src="https://tse1.mm.bing.net/th/id/OIP.pXgChSdlp1XEdhK6SaijyQHaD4?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Shopee">
+        </div>
+
+        <div class="side-item">
+          <a href="#">Số phận nhãn hiệu kem Celano mà HIEUTHUHAI làm CEO sẽ ra sao?</a>
+          <img src="https://tse2.mm.bing.net/th/id/OIP.6-DCXvTr7qE-Yb7w9_aYrAHaD4?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Celano">
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- CHÂN TRANG -->
+  <footer>
+    <p>© 2025 Báo Kinh Doanh Online. Tất cả các quyền được bảo lưu.</p>
+    <p>Liên hệ: info@kinhdoanh.vn | Hotline: 0909 888 999</p>
+  </footer>
+
+</body>
+</html>
